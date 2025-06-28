@@ -17,6 +17,19 @@ export default [
       ".idea/",
       "*.config.mjs",
     ],
+    languageOptions: {
+      globals: {
+        window: "readonly",
+        document: "readonly",
+        fetch: "readonly",
+        alert: "readonly",
+        console: "readonly",
+        navigator: "readonly",
+        localStorage: "readonly",
+        location: "readonly",
+        MutationObserver: "readonly",
+      },
+    },
   },
   {
     files: ["**/*.ts", "**/*.tsx"],
@@ -24,6 +37,18 @@ export default [
       parser: tsParser,
       parserOptions: {
         project: "./tsconfig.json",
+        MutationObserver: "readonly",
+      },
+      globals: {
+        window: "readonly",
+        document: "readonly",
+        fetch: "readonly",
+        alert: "readonly",
+        console: "readonly",
+        navigator: "readonly",
+        localStorage: "readonly",
+        location: "readonly",
+        MutationObserver: "readonly",
       },
     },
     plugins: {
@@ -36,7 +61,15 @@ export default [
   {
     languageOptions: {
       globals: {
+        window: "readonly",
         document: "readonly",
+        fetch: "readonly",
+        alert: "readonly",
+        console: "readonly",
+        navigator: "readonly",
+        localStorage: "readonly",
+        location: "readonly",
+        MutationObserver: "readonly",
       },
     },
   },
